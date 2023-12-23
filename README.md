@@ -9,26 +9,27 @@ To run the program, you only need PET scans (CT is not required) of patients in 
 
 A typical data directory might look like:
 
-|-- main_folder                                             <-- The main folder or all patient folders (Give it any NAME)
+|-- main_folder                                             
 
-|      |-- parent folder (patient_folder_1)             <-- Individual patient folder name with unique id
-|           |-- pet                                     <-- The pet folder for the .nii suv file
-                 | -- name.nii or name.nii.gz            <-- The pet image in nifti format (Name can be anything)
-|           |-- gt                                      <-- The corresponding ground truth folder for the .nii file  
-                 | -- name.nii or name.nii.gz            <-- The ground truth (gt) image in nifti format (Name can be anything)
-|      |-- parent folder (patient_folder_2)             <-- Individual patient folder name with unique id
-|          |-- gt                                     <-- The pet folder for the .nii suv file
-                | -- name.nii or name.nii.gz            <-- The pet image in nifti format (Name can be anything)
-|         |-- pet                                      <-- The corresponding ground truth folder for the .nii file  
-                | -- name.nii or name.nii.gz            <-- The ground truth (gt) image in nifti format (Name can be anything)
+|      |-- parent folder (patient_folder_1)             
+|           |-- pet                                     
+                 | -- name.nii or name.nii.gz            
+|           |-- gt                                      
+                 | -- name.nii or name.nii.gz            
+|      |-- parent folder (patient_folder_2)             
+|          |-- gt                                     
+                | -- name.nii or name.nii.gz            
+|         |-- pet                                      
+                | -- name.nii or name.nii.gz            
 |           .
 |           .
 |           .
-|      |-- parent folder (patient_folder_N)             <-- Individual patient folder name with unique id
-|           |-- pet                                     <-- The pet folder for the .nii suv file
-                | -- name.nii or name.nii.gz            <-- The pet image in nifti format (Name can be anything)
-|           |-- gt                                      <-- The corresponding ground truth folder for the .nii file  
-                | -- name.nii or name.nii.gz            <-- The ground truth (gt) image in nifti format (Name can be anything)
+|      |-- parent folder (patient_folder_N)            
+|           |-- pet                                   
+                | -- name.nii or name.nii.gz           
+|           |-- gt                                      
+                | -- name.nii or name.nii.gz           
+                
 Note: the folder name for PET images should be pet and for the ground truth gt. All other folder and sub-folder names could be anything.
 
 ⚙️ Installation
@@ -36,10 +37,10 @@ Please read the documentation before opening an issue!
 
 Download/clone code to your local computer
 
-- git clone https://github.com/KibromBerihu/ai4elife.git
+- git clone https://github.com/arezoo-farmani/LFBNet3D.git
 
 - Alternatively:
-  1. go to https://github.com/KibromBerihu/ai4elife.git >> [Code] >> Download ZIP file.
+  1. go to https://github.com/arezoo-farmani/LFBNet3D.git >> [Code] >> Download ZIP file.
 To install in virtual environment
 
 We recommend you to create virtual environment. please refer to THIS regarding how to create a virtual environment using conda.
@@ -114,13 +115,13 @@ Run the following commands for activating the virtual environment, and then trai
 Activate the virtual environment: conda activate myenv
 
 
-To train the model from a new dataset, change to the ai4elife/src directory:
+# To train the model from a new dataset, change to the LFBNet3D/src directory:
 
 
 python train.py --input_dir path/to/training_validation_data/  --data_id <unique_data_name> --task <train>
 
 
-To evaluate on the validation data:
+# To evaluate on the validation data:
 
 python train.py --input_dir path/to/validation_data/  --data_id <unique_data_name> --task <valid>
 
